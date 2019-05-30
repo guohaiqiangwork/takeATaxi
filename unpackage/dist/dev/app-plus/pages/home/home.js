@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"title { position: fixed; top: 0; background-color: red; z-index: 999; width: 100%; height: 44px; }\n",],undefined,{path:"./pages/home/home.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/home/home.wxml') } }));
