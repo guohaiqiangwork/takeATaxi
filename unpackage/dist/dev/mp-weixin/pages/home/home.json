@@ -1,6 +1,0 @@
-{
-  "navigationStyle": "custom",
-  "usingComponents": {
-    "head-navigation": "/components/HeadNavigation/headNavigatiom"
-  }
-}

@@ -1,1 +1,0 @@
-<view class="content" bind:__l="__l"><image class="logo" src="/static/logo.png"></image><view><text data-event-opts="{{[['tap',[['goToHome',['898']]]]]}}" class="title" bindtap="__e">{{title}}</text></view></view>
