@@ -56,12 +56,18 @@
 			<button onclick="showLine()">搜索</button>
 			<button onclick="showPoints()">显示所有的点</button>
 			<button type="button" onclick="huaLX()">画路线</button>
-					<div id="plus/personal.html" onclick="clicked(this.id,'personal')">
-个人中心
+			<div id="plus/personal.html" onclick="clicked(this.id,'personal')">
+				个人中心
+			</div>
 		</div>
-		</div>
-
+		<script src="js/app.js"></script>
 		<script type="text/javascript">
+			window.addEventListener('show', function() {
+				var state = app.getState();
+				account.innerText = state.account;
+			}, false);
+
+
 			var map
 			var map = new AMap.Map("container", {
 				resizeEnable: true,
@@ -80,6 +86,7 @@
 				geolocation.getCurrentPosition();
 				AMap.event.addListener(geolocation, 'complete', onComplete); //返回定位信息  
 				AMap.event.addListener(geolocation, 'error', onError); //返回定位出错信息  
+				console.log(AMap.UA.ios + '判断是否是ios')
 			});
 			//解析定位结果  
 			function onComplete(data) {
@@ -317,6 +324,7 @@
 			 */
 			var _openw = null;
 			var as = 'pop-in';
+
 			function clicked(id, t, d) {
 				console.log(id)
 				console.log(t)
