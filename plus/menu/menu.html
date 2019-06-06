@@ -36,6 +36,7 @@
 		</style>
 	</head>
 	<body>
+		<button id="close-btn" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">关闭侧滑菜单</button>
 		<div style="text-align: center;">
 			<img src="../../images/qq.png" width="50%">
 		</div>
@@ -45,23 +46,23 @@
 		<div class="mui-content">
 			<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
+					<a class="mui-navigate-right" onclick="goToWebView('../myWallet/myWallet.html','myWallet')">
 						<img src="../../images/iconfont-tianjia.png" width="10px"> 我的钱包
 					</a>
 				</li>
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
+					<a class="mui-navigate-right" onclick="goToWebView('../order/order.html','order')">
 						<img src="../../images/iconfont-tianjia.png" width="10px"> 我的订单
 					</a>
 				</li>
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
-					<img src="../../images/iconfont-tianjia.png" width="10px"> 邀请有礼
+					<a class="mui-navigate-right"  onclick="goToWebView('../invitation/invitation.html','invitation')">
+						<img src="../../images/iconfont-tianjia.png" width="10px"> 邀请有礼
 					</a>
 				</li>
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
-					<img src="../../images/iconfont-tianjia.png" width="10px"> 常用地址
+					<a class="mui-navigate-right" onclick="goToWebView('../address/address.html','address')">
+						<img src="../../images/iconfont-tianjia.png" width="10px"> 常用地址
 					</a>
 				</li>
 				<li class="mui-table-view-cell">
@@ -70,7 +71,7 @@
 					</a>
 				</li>
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
+					<a class="mui-navigate-right" onclick="goToWebView('../setUp/setUp.html','setUp')">
 						<img src="../../images/iconfont-tianjia.png" width="10px"> 设置
 					</a>
 				</li>
@@ -97,6 +98,19 @@
 			window.addEventListener("swipeleft", closeMenu);
 			document.getElementById("close-btn").addEventListener('tap', closeMenu);
 			mui.menu = closeMenu;
+		
+			// 页面跳转
+			function goToWebView(url, id) {
+				closeMenu();//关闭侧栏菜单
+				console.log(url)
+				mui.openWindow({
+					url: url,
+					id: id,
+					extras: {
+						cs: id //自定义扩展参数，可以用来处理页面间传值
+					},
+				});
+			}
 		</script>
 	</body>
 
