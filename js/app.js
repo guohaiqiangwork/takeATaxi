@@ -65,6 +65,7 @@
 	 **/
 	owner.getState = function() {
 		var stateText = localStorage.getItem('$state') || "{}";
+		console.log(JSON.stringify(stateText))
 		return JSON.parse(stateText);
 	};
 
