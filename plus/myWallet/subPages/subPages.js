@@ -1,5 +1,6 @@
 var app = angular.module("subPages", []);
 app.controller("subPagesController", function($scope, $http) {
+	// 充值金额列表
 	$scope.rechargeList = [{
 		number: '1元',
 		id: '01'
@@ -28,14 +29,26 @@ app.controller("subPagesController", function($scope, $http) {
 		number: '200元',
 		id: '09'
 	}]
-	$scope.moneyFaly = "01" //选中金额
+	$scope.subPages = {
+		moneyFaly: "01", //选中金额
+		payFail: false, //失败提示框
+		passwordFaly: true //密码输入框
+	};
+	// 切换充值金额
 	$scope.moneyTab = function(id) {
-		console.log(id)
 		$scope.moneyFaly = id
-	}
+	};
+	// 关闭失败弹窗
+	$scope.closeModel = function() {
+		$scope.subPages.payFail = false
+	};
+	// 关闭密码支付
+	$scope.closeModelP = function() {
+		$scope.subPages.passwordFaly = false
+	};
 
 	function init() {
 		$scope.message = "Hello, Angular JS.";
-	}
+	};
 	init()
 })

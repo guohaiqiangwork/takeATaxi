@@ -1,18 +1,36 @@
 /* 公共 */
-.font_color_red{
+.font_color_red {
 	color: red;
 }
-.font_text_right{
+
+.font_text_right {
 	text-align: right;
 }
+
 /* 字体颜色 */
-.font_color_ff{
+.font_color_ff {
 	color: #FFFFFF;
 }
+
 /* 背景色 */
-.backgroung_color_007{
-	background-color:#007AFF ;
+.backgroung_color_007 {
+	background-color: #007AFF;
 }
+
+.backgroung_color_ff {
+	background-color: #FFFFFF;
+}
+
+/* margin */
+.margin_top3 {
+	margin-top: 3%;
+}
+
+/* 内容 */
+.margin_top_title {
+	margin-top: 2.8125rem;
+}
+
 /*充值  */
 .recharge_div {
 	padding: 3%;
@@ -21,7 +39,8 @@
 	color: #007AFF;
 	border: 1px solid #007AFF;
 }
-.recharge_div_Z{
+
+.recharge_div_Z {
 	color: #FFFFFF;
 	background-color: #007AFF;
 	padding: 3%;
@@ -29,9 +48,22 @@
 	margin-top: 3%;
 	border: 1px solid #007AFF;
 }
-.recharge_button_c{
+
+.recharge_button_c {
 	width: 80%;
 	margin-left: 10%;
 	line-height: 3;
 	margin-top: 40%;
+}
+
+.recharge_money_in {
+	border: none !important;
+	border-bottom: 1px solid #555555 !important;
+}
+
+/* 提现 */
+.password_input {
+	width: 12%;
+	margin-top: 8%;
+	float: left
 }

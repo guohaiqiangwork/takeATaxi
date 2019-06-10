@@ -4,20 +4,108 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>提现</title>
-		<link rel="stylesheet" href="../../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../../css/mui.min.css" />
+		<link rel="stylesheet" href="subpages.css" />
 		<script src="../../../js/angular.1.2.29.min.js"></script>
 		<script src="subPages.js"></script>
 	</head>
 
-	<body  ng-app="subPages" ng-controller="subPagesController">
+	<body ng-app="subPages" ng-controller="subPagesController" class="backgroung_color_ff">
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">提现</h1>
 		</header>
-		<div >
-			
-		</div>
-		<script src="../../../js/mui.min.js"></script>
+		<div class="margin_top_title">
+			<div>
+				提现金额
+			</div>
+			<div class="mui-row">
+				<div class="mui-col-xs-1 margin_top3">
+					¥
+				</div>
+				<div class="mui-col-xs-10">
+					<input type="number" name="" id="" value="" class="recharge_money_in" />
+				</div>
+			</div>
+			<div>
+				可提现10同乘币，1同乘币 = 1元
+			</div>
 
+			<div>
+				<!-- 提现到支付宝 -->
+				<div class="mui-input-row mui-radio">
+					<label>提现到支付宝</label>
+					<input name="radio1" type="radio">
+				</div>
+				<div class="mui-input-row mui-radio">
+					<label>提现到支付宝</label>
+					<input name="radio1" type="radio">
+				</div>
+			</div>
+			<div class="backgroung_color_007 font_color_ff mui-text-center">
+				确认提现
+			</div>
+		</div>
+		<!-- 提现失败弹窗 -->
+		<div class="mui-popup-backdrop mui-active" style="display: block;" ng-if="subPages.payFail">
+			<div class="backgroung_color_ff mui-text-center">
+				<div>
+					提现失败
+				</div>
+				<div>
+					提现金额不足1元
+				</div>
+				<div ng-click="closeModel('payFail')">
+					知道了
+				</div>
+			</div>
+		</div>
+		<!-- 密码输入框 -->
+		<div class="mui-popup-backdrop mui-active" style="display: block;" ng-if="subPages.passwordFaly">
+			<div class="backgroung_color_ff mui-text-center">
+				<div>
+					请输入支付密码
+				</div>
+	<div class="ui-dialog-body ui-form">
+    <div class="noticeInfo">{{notice}}</div>
+    <div class="ui-form-item" ng-class="{'ui-focus':focused}">
+        <ul class="pwdList ui-form-text">
+            <li ng-repeat="item in passwordList track by $index" ng-click="inputFocus()">
+                <span ng-class="{'dot':item}"></span>
+            </li>
+        </ul>
+    </div>
+    <input type="tel" pattern="[0-9]*" name="txtPassword" ng-trim="false" ng-model="pwdValue" ng-change="updatePassword();" ng-focus="onFocus();" ng-blur="onBlur()" autocomplete="off" autocorrect="off" maxlength="6">
+</div>
+
+
+
+				<!-- <div class="mui-row" style="margin-left: 14%;">
+					<div class="password_input">
+						<input type="number" name="" id="" value=""  maxlength="1" style="padding: 0;"/>
+					</div>
+					<div class="password_input">
+						<input type="number" name="" id="" value="" maxlength="1" style="padding: 0;"/>
+					</div>
+					<div class="password_input">
+						<input type="password" name="" id="" value="" maxlength="1" style="padding: 0;"/>
+					</div>
+					<div class="password_input">
+						<input type="password" name="" id="" value="" maxlength="1" style="padding: 0;"/>
+					</div>
+					<div class="password_input">
+						<input type="password" name="" id="" value="" maxlength="1" style="padding: 0;"/>
+					</div>
+					<div class="password_input">
+						<input type="password" name="" id="" value="" maxlength="1" style="padding: 0;"/>
+					</div>
+				</div> -->
+				<div ng-click="closeModelP()">
+					确认支付
+				</div>
+			</div>
+		</div>
+
+		<script src="../../../js/mui.min.js"></script>
 	</body>
 </html>
