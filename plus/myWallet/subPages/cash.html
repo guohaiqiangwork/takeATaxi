@@ -42,7 +42,7 @@
 					<input name="radio1" type="radio">
 				</div>
 			</div>
-			<div class="backgroung_color_007 font_color_ff mui-text-center">
+			<div class="backgroung_color_007 font_color_ff mui-text-center" ng-click="openCloseModelP(true)">
 				确认提现
 			</div>
 		</div>
@@ -55,7 +55,7 @@
 				<div>
 					提现金额不足1元
 				</div>
-				<div ng-click="closeModel('payFail')">
+				<div ng-click="openCloseModel(false)">
 					知道了
 				</div>
 			</div>
@@ -66,20 +66,19 @@
 				<div>
 					请输入支付密码
 				</div>
-	<div class="ui-dialog-body ui-form">
-    <div class="noticeInfo">{{notice}}</div>
-    <div class="ui-form-item" ng-class="{'ui-focus':focused}">
-        <ul class="pwdList ui-form-text">
-            <li ng-repeat="item in passwordList track by $index" ng-click="inputFocus()">
-                <span ng-class="{'dot':item}"></span>
-            </li>
-        </ul>
-    </div>
-    <input type="tel" pattern="[0-9]*" name="txtPassword" ng-trim="false" ng-model="pwdValue" ng-change="updatePassword();" ng-focus="onFocus();" ng-blur="onBlur()" autocomplete="off" autocorrect="off" maxlength="6">
-</div>
-
-
-
+				<!-- <div>
+					<div class="noticeInfo">{{notice}}</div>
+					<div>
+						<ul class="pwdList ui-form-text">
+							<li ng-repeat="item in passwordList track by $index" ng-click="inputFocus()">
+								<span ng-class="{'dot':item}"></span>
+							</li>
+						</ul>
+					</div>
+					<input type="tel" pattern="[0-9]*" name="txtPassword" ng-trim="false" ng-model="pwdValue" ng-change="updatePassword();"
+					 ng-focus="onFocus();" ng-blur="onBlur()" autocomplete="off" autocorrect="off" maxlength="6">
+				</div> -->
+				
 				<!-- <div class="mui-row" style="margin-left: 14%;">
 					<div class="password_input">
 						<input type="number" name="" id="" value=""  maxlength="1" style="padding: 0;"/>
@@ -100,7 +99,7 @@
 						<input type="password" name="" id="" value="" maxlength="1" style="padding: 0;"/>
 					</div>
 				</div> -->
-				<div ng-click="closeModelP()">
+				<div ng-click="openCloseModelP(false)">
 					确认支付
 				</div>
 			</div>

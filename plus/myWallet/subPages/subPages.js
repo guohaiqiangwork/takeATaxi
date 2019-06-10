@@ -32,19 +32,19 @@ app.controller("subPagesController", function($scope, $http) {
 	$scope.subPages = {
 		moneyFaly: "01", //选中金额
 		payFail: false, //失败提示框
-		passwordFaly: true //密码输入框
+		passwordFaly: false //密码输入框
 	};
 	// 切换充值金额
 	$scope.moneyTab = function(id) {
 		$scope.moneyFaly = id
 	};
-	// 关闭失败弹窗
-	$scope.closeModel = function() {
-		$scope.subPages.payFail = false
+	// 打开/关闭失败弹窗
+	$scope.openCloseModel = function(id) {
+		$scope.subPages.payFail = id
 	};
 	// 关闭密码支付
-	$scope.closeModelP = function() {
-		$scope.subPages.passwordFaly = false
+	$scope.openCloseModelP = function(id) {
+		$scope.subPages.passwordFaly = id
 	};
 
 	function init() {
