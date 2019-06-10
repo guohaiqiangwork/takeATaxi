@@ -1,0 +1,108 @@
+html{
+	font-size: 16px;
+
+}
+#login-plus{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: url(../../../images/bg-login.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#login-plus p{
+	color: #fff;
+}
+
+
+
+#login-plus input{
+	position: relative;
+	color: #fff;
+	border: 1px solid rgba(0,0,0,0);
+	border-bottom: 2px solid #959595;
+	background-color: rgba(0,0,0,0);
+}
+
+.next-btn{
+	width: calc(100% - 2.625rem);
+	border-radius: 1.25rem;
+	padding: 0.625rem;
+}
+
+.line-20{
+	line-height: 1.25rem;
+}
+
+.logo{
+	width: 3.875rem;
+	height: 3.875rem;
+	margin-top: 5.0625rem;
+}
+
+#arraw img{
+	position: absolute;
+	left: 1.875rem;
+	top: 2.8125rem;
+	width: 1.5625rem;
+	height:1.5625rem;
+}
+
+.mui-icon-clear:before, .mui-icon-close-filled:before {
+    content: "\e434";
+}
+
+.mui-icon-clear:after, .mui-icon-close-filled:after{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 1;
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+    color: #999;
+    text-align: center;
+	}
+	
+.iptCode{
+	font-size: 25px;
+	color: #1F1F1F;
+}
+
+#getCode{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	overflow-x: hidden;
+}
+
+.form-content{
+	padding: 2.1875rem 0 2.1875rem 0.9375rem ;
+	border: 1px slid #000000;
+	line-height: 2.1875rem;
+}
+
+.pd-5{
+	padding: 5px 0 0 0;
+	margin: 0 0 0 0.625rem;
+	overflow: hidden;
+}
+
+.ipt-box input{
+	width: 100%;
+	margin-right: 1.6875rem;
+	text-align: center;
+	border: none;
+	border-bottom: 3px solid #999999;
+	overflow: hidden;
+}
+
+.mr-27{
+	margin-right: 1.6875rem;
+}
+
+.mui-popup-title+.mui-popup-text{
+	text-align: left;
+	display: flex;
+	justify-content: center;
+}

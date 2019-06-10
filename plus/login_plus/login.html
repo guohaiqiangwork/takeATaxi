@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+
+	<body>
+		<div class="mui-content"  id="login-plus">
+			<div id="arraw">
+				<img src="../../images/arraw_left.png" >
+			</div>
+			<div id="">
+				<img  class="logo" src="../../images/logo.png" >
+				<p class="font-14 mb-0 line-20">美好同乘, 让人际关系更美好</p>
+				<p class="font-9">MEIHAO COMMUTING TOGETHER</p>
+			</div>
+			<div class="mui-input-row li-ipt-width li-m-center ">
+				<input type="text" class="mui-input-clear" class=" li-border-none li-ipt-bottom " placeholder="请输入手机号码">
+				<span class="mui-icon mui-icon-clear "></span>
+			</div>
+			<button type="button" class="mui-btn mui-btn-blue next-btn">下一步</button>
+			<p  class="mt-10">
+                登录即代表同意
+				<a href="javascript:void(0);">《隐私协议》</a>
+				 和
+				<a href="javascript:void(0);">《服务协议》</a>
+            </p>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			(function ($) {
+				$.init({
+					// "plus":{
+					// 	"statusbar":{
+					// 		"immersed": true
+					// 	}
+					// }
+					statusBarImmersed:true;
+					$('.mui-input-row input').input();
+					 
+				});
+			}(mui))
+		</script>
+	</body>
+
+</html>

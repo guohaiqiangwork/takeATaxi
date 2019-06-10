@@ -49,6 +49,9 @@
 	</head>
 	<body>
 		<div id="container"></div>
+			<div class="mui-input-row mui-search">
+		 <input type="search" class="mui-input-clear" placeholder="">
+		</div>
 		<div id="pickerBox">
 			<input id="pickerInput1" placeholder="输入起始地点" />
 			<input id="pickerInput2" placeholder="输入目的地点" />
@@ -203,7 +206,7 @@
 
 			var lines = [];
 			var showLine = function() {
-				console.log('搜索')
+				console.log('搜索',$)
 				console.log($("#pickerInput1").val())
 				var truckDriving = new AMap.TruckDriving({
 					map: map,

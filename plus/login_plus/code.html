@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+
+	<body>
+		<div class="mui-content ">
+			<div id="getCode">
+				<div class="form-content">
+					<img src="../../images/arraw_left.png" class="icon-arraw">
+					<div class="pd-5">
+							
+						
+						<p class="iptCode">输入验证码</p>
+						<p>
+						  已发送验证码至 176 1076 3978
+						</p>
+						<div class="flex-between ipt-box">
+							<input type="number"  value="" max="9"  />
+							<input type="number"  value="" max="9"  />
+							<input type="number"  value="" max="9"  />
+							<input type="number"  value="" max="9"  />
+						</div>
+						<p class="flex-between mr-27">
+							<a>重新获取验证码</a>
+							<span class="receivenone">收不到？</span>
+							
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			(function ($){
+				$.init();
+				$('.form-content').on('tap','.receivenone',function(){
+					$.alert('1.手机号码是否输入正确 \n 2.检查短信息是否被手机拦截'," ",'知道了',function (e) {
+						console.log(e);
+					   // e.index
+					},'div')
+					
+				})
+				
+			}(mui))
+		</script>
+	</body>
+
+</html>
