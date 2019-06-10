@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>充值</title>
+		<link rel="stylesheet" href="../../../css/mui.min.css" />
+		<link rel="stylesheet" href="subpages.css" />
+		<script src="../../../js/angular.1.2.29.min.js"></script>
+		<script src="subPages.js"></script>
+	</head>
+
+	<body ng-app="subPages" ng-controller="subPagesController">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">充值</h1>
+		</header>
+		<div style="margin-top: 2.8125rem;">
+			<div class="mui-row">
+				<div class="mui-col-xs-3 font_text_right">
+					充值账号
+				</div>
+				<div class="mui-col-xs-8">
+					<input type="number" name="" id="" value="" style="width: 100%;" />
+				</div>
+			</div>
+			<!-- 金额 -->
+			<div>
+				充值金额
+			</div>
+			<div class="mui-row">
+				<div ng-repeat="item in rechargeList" class="mui-col-xs-3 mui-text-center" ng-class="moneyFaly != item.id ? 'recharge_div' : 'recharge_div_Z'">
+					<span ng-click="moneyTab(item.id)">{{item.number}}</span>
+				</div>
+			</div>
+			<div class="font_color_red">
+				<span class="mui-icon mui-icon-info"></span> 一元等于一同乘币
+			</div>
+			<div class="mui-text-center recharge_button_c backgroung_color_007 font_color_ff">
+				确认充值
+			</div>
+		</div>
+		<script src="../../../js/mui.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+/* 公共 */
+.font_color_red{
+	color: red;
+}
+.font_text_right{
+	text-align: right;
+}
+/* 字体颜色 */
+.font_color_ff{
+	color: #FFFFFF;
+}
+/* 背景色 */
+.backgroung_color_007{
+	background-color:#007AFF ;
+}
+/*充值  */
+.recharge_div {
+	padding: 3%;
+	margin-left: 5%;
+	margin-top: 3%;
+	color: #007AFF;
+	border: 1px solid #007AFF;
+}
+.recharge_div_Z{
+	color: #FFFFFF;
+	background-color: #007AFF;
+	padding: 3%;
+	margin-left: 5%;
+	margin-top: 3%;
+	border: 1px solid #007AFF;
+}
+.recharge_button_c{
+	width: 80%;
+	margin-left: 10%;
+	line-height: 3;
+	margin-top: 40%;
+}
