@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="order.css" rel="stylesheet" />
+		<script src="../../js/angular.1.2.29.min.js"></script>
+		<script src="orderCtr.js"></script>
+	</head>
+
+	<body ng-controller="orderController" ng-app="order" class="background_colorff">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">支付订单</h1>
+		</header>
+		<div style="margin-top: 2.8125rem;">
+			<div class="mui-text-center font_color1A">
+				<div class="font_size15 padding_top8">
+					需支付
+				</div>
+				<div class="font_size_38 margin_top3">
+					10 <span class="font_size12">币</span>
+				</div>
+			</div>
+			<div class="payOrder_div"></div>
+			<div class="mui-row font_color1A margin_top3">
+				<div class="mui-col-xs-6 font_size15 mui-tetx-left padding_left3">
+					同城币
+				</div>
+				<div class="mui-col-xs-6 font_size15 mui-text-right padding_right3">
+					10币
+				</div>
+			</div>
+
+			<div class="mui-row font_color1A margin_top3">
+				<div class="mui-col-xs-8 font_size15 mui-tetx-left padding_left3">
+					里程费（预计13.0公里）
+				</div>
+				<div class="mui-col-xs-4 font_size15 mui-text-right padding_right3">
+					14币
+				</div>
+			</div>
+			<div class="mui-row font_color1A margin_top3">
+				<div class="mui-col-xs-6 font_size15 mui-tetx-left padding_left3">
+					3人优惠
+				</div>
+				<div class="mui-col-xs-6 font_size15 mui-text-right padding_right3">
+					-4币
+				</div>
+			</div>
+			<div class="mui-row font_color1A margin_top3">
+				<div class="mui-col-xs-6 font_size15 mui-tetx-left padding_left3">
+					实际支付
+				</div>
+				<div class="mui-col-xs-6 font_size13 mui-text-right padding_right3">
+					10币
+				</div>
+			</div>
+			<div>
+				<div class="order_pay_btn" ng-click="openMoney(true)">
+					确认
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- 支付密码框 -->
+		<div class="mui-popup-backdrop mui-active" style="display: block;" ng-if="order.payFaly">
+			<div class="background_colorff mui-text-center">
+			<button type="submit" ng-click="openMoney(false)">密码输入框</button>	
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+
+		</script>
+	</body>
+
+</html>

@@ -41,7 +41,7 @@
 					</div>
 					<div class="mui-col-xs-4 mui-text-center">
 						<div class="order_btn" id="orderFaly">
-							
+
 						</div>
 						<!-- <img src="../../images/arraw_left.png" > -->
 					</div>
@@ -87,6 +87,11 @@
 						2人
 					</div>
 				</div>
+				<div style="padding-bottom: 5%;">
+					<div class="pay_btn" onclick= "goToPay()">
+						去支付
+					</div>
+				</div>
 			</div>
 		</div>
 		<script src="../../js/mui.min.js"></script>
@@ -99,6 +104,15 @@
 				console.log(name)
 				document.getElementById('orderFaly').innerHTML = name
 			});
+			goToPay = function(){
+				console.log('支付')
+				mui.openWindow({
+					url: 'payOrder.html',
+					extras: {
+						name: "id" //扩展参数
+					}
+				});
+			}
 		</script>
 	</body>
 

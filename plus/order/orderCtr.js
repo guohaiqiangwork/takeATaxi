@@ -32,10 +32,16 @@ app.controller("orderController", function($scope, $http) {
 				add1:'京东卡上了飞机及',
 				add2:'发顺丰撒发上'
 			}
-		]
+		],
+		payFaly:false,//支付确认
 	},
+	// 跳转到订单详情
 	$scope.goToDetails = function(id){
 		goToDetailsN(id)
+	};
+	// 打开/关闭密码弹窗
+	$scope.openMoney = function(faly){
+		$scope.order.payFaly = faly
 	}
 	function init() {
 		$scope.message = "Hello, Angular JS.";

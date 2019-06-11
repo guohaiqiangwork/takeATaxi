@@ -2,9 +2,11 @@
 .padding_left3 {
 	padding-left: 3%;
 }
-.padding_right3{
+
+.padding_right3 {
 	padding-right: 3%;
 }
+
 .padding_left2 {
 	padding-left: 2%;
 }
@@ -13,12 +15,20 @@
 	padding-top: 3%;
 }
 
+.padding_top8 {
+	padding-top: 8%;
+}
+
 .padding_bottom3 {
 	padding-bottom: 3%;
 }
 
 .margin_top3 {
 	margin-top: 3%;
+}
+
+.margin_top8 {
+	margin-top: 8%;
 }
 
 .margin_bottom3 {
@@ -36,36 +46,49 @@
 .background_colorff {
 	background-color: #FFFFFF;
 }
+
 /* 字体 */
-.font_size16{
+.font_size_38 {
+	font-size: 2.375rem;
+}
+
+.font_size16 {
 	font-size: 1rem;
 }
-.font_size15{
+
+.font_size15 {
 	font-size: 0.9375rem;
 }
-.font_size14{
+
+.font_size14 {
 	font-size: 0.875rem;
 }
-.font_size13{
-	font_size:0.8125rem
+
+.font_size13 {
+	font_size: 0.8125rem
 }
-.font_size12{
+
+.font_size12 {
 	font-size: 0.75rem;
 }
-.font_color1A{
+
+.font_color1A {
 	color: #1A202C;
 }
-.font_color3f{
+
+.font_color3f {
 	color: #3F454B;
 }
+
 /* div */
-.img_border_r14{
+.img_border_r14 {
 	width: 0.875rem;
 	height: 0.875rem;
 	border: 1px solid #FFFFFF;
 	border-radius: 50%;
 	/* overflow: hidden; */
 }
+
 /* 订单列表 */
 .order_s_lj {
 	height: 1.875rem;
@@ -73,10 +96,11 @@
 	border-left: 0.0625rem #000000 dashed;
 	margin-left: 18%;
 }
-.text_over_hidden{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+.text_over_hidden {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 /* 订单详情 */
@@ -89,7 +113,8 @@
 	border: 1px solid #E9EAEA;
 	text-align: center;
 }
-.order_btn{
+
+.order_btn {
 	border: 1px solid #F52D56;
 	color: #F52D56;
 	font-size: 0.8125rem;
@@ -97,4 +122,36 @@
 	border-radius: 0.3125rem;
 	width: 70%;
 	margin-left: 15%;
+}
+
+.pay_btn {
+	width: 90%;
+	margin-left: 5%;
+	background-color: #008BD5;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 1rem;
+	margin-top: 40%;
+	line-height: 2.5;
+	border-radius: 0.3125rem;
+
+}
+
+/* 支付 */
+.payOrder_div {
+	width: 90%;
+	margin-left: 5%;
+	border-top: 0.0625rem solid #E2E2E2;
+	margin-top: 8%;
+}
+.order_pay_btn{
+	width: 90%;
+	margin-left: 5%;
+	color: #FFFFFF;
+	background-color: #008BD5;
+	font-size: 1rem;
+	border-radius: 0.1875rem;
+	text-align: center;
+	margin-top: 40%;
+	line-height: 2.5;
 }
