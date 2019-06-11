@@ -33,6 +33,9 @@ app.controller("orderController", function($scope, $http) {
 				add2:'发顺丰撒发上'
 			}
 		]
+	},
+	$scope.goToDetails = function(id){
+		goToDetailsN(id)
 	}
 	function init() {
 		$scope.message = "Hello, Angular JS.";
