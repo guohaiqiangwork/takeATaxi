@@ -31,6 +31,10 @@
 	margin-top: 8%;
 }
 
+.margin_top40 {
+	margin-top: 40%;
+}
+
 .margin_bottom3 {
 	margin-bottom: 3%;
 }
@@ -42,7 +46,9 @@
 .margin_left3 {
 	margin-left: 3%;
 }
-
+.margin_left8 {
+	margin-left: 8%;
+}
 .background_colorff {
 	background-color: #FFFFFF;
 }
@@ -78,6 +84,10 @@
 
 .font_color3f {
 	color: #3F454B;
+}
+
+.font_colorA1 {
+	color: #A1A1A1;
 }
 
 /* div */
@@ -131,10 +141,15 @@
 	color: #FFFFFF;
 	text-align: center;
 	font-size: 1rem;
-	margin-top: 40%;
 	line-height: 2.5;
 	border-radius: 0.3125rem;
+}
 
+.order_p_j {
+	border-top: 0.0625rem solid #E9E9E9;
+	margin-top: 10%;
+	width: 100%;
+	height: 0.625rem;
 }
 
 /* 支付 */
@@ -144,7 +159,8 @@
 	border-top: 0.0625rem solid #E2E2E2;
 	margin-top: 8%;
 }
-.order_pay_btn{
+
+.order_pay_btn {
 	width: 90%;
 	margin-left: 5%;
 	color: #FFFFFF;
@@ -154,4 +170,40 @@
 	text-align: center;
 	margin-top: 40%;
 	line-height: 2.5;
+}
+
+/* 同城寄语*/
+.city_border_r {
+	/* height: 3.25rem; */
+	border-radius: 4rem;
+	width: 95%;
+	margin-left: 2%;
+	background-color: #CBEDFF;
+}
+
+.city_img_b {
+	width: 1.0625rem;
+	height: 1.0625rem;
+	border-radius: 50%;
+	text-align: center;
+}
+.order_sh_zt{
+	border: 0.0625rem solid #008BD5;
+	color: #008BD5;
+	width: 25%;
+	text-align: center;
+	font-size: 0.75rem;
+	float: right;
+	margin-top: 3%;
+	border-radius: 0.1875rem;
+}
+.order_sh_sb{
+	border: 0.0625rem solid #F52D56;
+	color: #F52D56;
+	width: 25%;
+	text-align: center;
+	font-size: 0.75rem;
+	float: right;
+	margin-top: 3%;
+	border-radius: 0.1875rem;
 }

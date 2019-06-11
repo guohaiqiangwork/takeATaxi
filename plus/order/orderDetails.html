@@ -40,9 +40,7 @@
 						2019-10-15 12:00
 					</div>
 					<div class="mui-col-xs-4 mui-text-center">
-						<div class="order_btn" id="orderFaly">
-
-						</div>
+						<div class="order_btn" id="orderFaly"></div>
 						<!-- <img src="../../images/arraw_left.png" > -->
 					</div>
 				</div>
@@ -87,33 +85,108 @@
 						2人
 					</div>
 				</div>
-				<div style="padding-bottom: 5%;">
-					<div class="pay_btn" onclick= "goToPay()">
+				<!-- 待支付 -->
+				<div style="padding-bottom: 5%;display: none;" id="dzf">
+					<div class="pay_btn margin_top40" onclick="goToOther('payOrder.html')">
 						去支付
 					</div>
 				</div>
+				<!-- 待评价 / 已完成-->
+				<div style="display: none;" id="dpj">
+					<div class="order_p_j"></div>
+					<div class="mui-row">
+						<div class="mui-col-xs-5 margin_left3 font_size15 font_color1A">
+							同乘寄语
+						</div>
+						<div class="mui-col-xs-6 mui-text-right font_size14 font_colorA1" onclick="goToOther('cityComment.html')">
+							查看更多
+							<img src="../../images/arraw_left.png" style="width: 0.4375rem;height: 0.6875rem;">
+						</div>
+					</div>
+					<div class="mui-row">
+						<div class="margin_left3 mui-col-xs-3 font_size15 font_color1A margin_top3">
+							我的寄语
+						</div>
+						<div class="mui-col-xs-8 mui-text-right" style="display: none;" id="shzt">
+							<div class="order_sh_zt" id="shzt">
+								审核中
+							</div>
+							<div class="order_sh_sb" id="shsb">
+								未通过
+							</div>
+						</div>
+					</div>
+
+					<div class="margin_top3" style="width: 90%;margin-left: 5%;">
+						<textarea id="textarea" rows="5" placeholder="请输入您的留言...."></textarea>
+					</div>
+					<div id="shpl" class="margin_left8"></div>
+					<div>
+						<div class="pay_btn margin_top3" onclick="confirmComment()">
+							确认评论
+						</div>
+					</div>
+				</div>
+				<!--  -->
 			</div>
 		</div>
+		<!-- <script>
+			var app = angular.module("orderD", []);
+			app.controller("orderDController", function($scope, $http, $rootScope) {
+				// 打开/关闭密码弹窗
+				openMoney = function(faly) {
+					$scope.detailsFaly = faly
+				
+				};
+
+				function init() {
+					
+				}
+				init()
+			})
+		</script> -->
 		<script src="../../js/mui.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
 			// 接受页面跳转参数
 			mui.plusReady(function() {
 				var self = plus.webview.currentWebview();
-				var name = self.name; //获得参数
-				console.log(name)
+				name = self.name; //获得参数
 				document.getElementById('orderFaly').innerHTML = name
+				// if (name == '待支付') {
+				// 	
+				// }
+				switch (name) {
+					case '待支付':
+						$("#dzf").css("display", "block");
+						break;
+					case '待评价':
+						$("#dpj").css("display", "block");
+						break;
+					case '已完成':
+						$("#dpj").css("display", "block");
+						break;
+				}
 			});
-			goToPay = function(){
-				console.log('支付')
+			// 去支付
+			goToOther = function(urlName) {
 				mui.openWindow({
-					url: 'payOrder.html',
+					url: urlName,
 					extras: {
 						name: "id" //扩展参数
 					}
 				});
+			};
+			// 确认评论
+			confirmComment = function() {
+				console.log($('#textarea').val())
+				$('#textarea').css("display", "none");
+				$('#shzt').css("display", "block");
+				$('#shpl').text($('#textarea').val())
 			}
 		</script>
+
 	</body>
 
 </html>

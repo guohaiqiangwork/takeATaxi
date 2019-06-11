@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="../../css/mui.min.css" rel="stylesheet" />
-		<link href="order.css" rel="stylesheet" />
 		<script src="../../js/angular.1.2.29.min.js"></script>
 		<script src="orderCtr.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="order.css" rel="stylesheet" />
 	</head>
 
 	<body ng-controller="orderController" ng-app="order">
@@ -50,11 +50,13 @@
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
-			//打开关于页面
+			//打开订单详情
 			goToDetailsN = function(id) {
-				console.log(id)
 				mui.openWindow({
 					url: 'orderDetails.html',
+					// show:{
+					// 	autoShow:false
+					// },
 					extras: {
 						name: id //扩展参数
 					}
