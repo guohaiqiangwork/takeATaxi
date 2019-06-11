@@ -1,0 +1,28 @@
+/* 公共 */
+.padding_left3 {
+	padding-left: 3%;
+}
+
+.padding_left2 {
+	padding-left: 2%;
+}
+
+.padding_top3 {
+	padding-top: 3%;
+}
+
+.padding_bottom3 {
+	padding-bottom: 3%;
+}
+
+.margin-top3 {
+	margin-top: 3%;
+}
+
+/* 订单列表 */
+.order_s_lj {
+	height: 1.875rem;
+	width: 0.0625rem;
+	border-left: 0.0625rem #000000 dashed;
+	margin-left: 18%;
+}
