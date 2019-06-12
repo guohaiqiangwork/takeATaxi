@@ -1,0 +1,32 @@
+.img_t_x {
+	width: 2.34375rem;
+	height: 2.34375rem;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 0.0625rem solid #E9EAEA;
+}
+
+.personal_input {
+	/* height: 2.5rem; */
+	line-height: 2.5;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-bottom: 0.0625rem solid #E9E9E9;
+	margin-left: 3%;
+}
+/* 头像选择 */
+.head_title{
+	background-color: #F8F8F8;
+	line-height: 2;
+}
+.head_img{
+	width: 2.40625rem;
+	height: 2.40625rem;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: #E9EAEA;
+}
+.btn_bottom{
+	position: absolute;
+	bottom: 8%;
+}
