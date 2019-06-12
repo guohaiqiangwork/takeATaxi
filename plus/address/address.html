@@ -6,16 +6,84 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../order/order.css" />
+		<link rel="stylesheet" type="text/css" href="address.css" />
 	</head>
 
-	<body>
+	<body class="background_colorff">
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">地址管理</h1>
+			<h1 class="mui-title">常用地址</h1>
+			<a class=" mui-btn mui-btn-link mui-pull-right" onclick="switchDelect('title1')" id="title1">删除</a>
+			<a class=" mui-btn mui-btn-link mui-pull-right" style="display: none;" onclick="switchDelect('title2')" id="title2">完成</a>
 		</header>
+		<div class="margin_top_tit">
+			<div class="mui-row" style="border-bottom: 1px solid #E9E9E9;">
+				<div class="mui-col-xs-2">
+					<div class="add_btn">
+						家
+					</div>
+				</div>
+				<div class="mui-col-xs-8 margin_top2">
+					<input type="text" name="" id="" value="" placeholder="设置家的地址" class="add_input" />
+				</div>
+				<div class="mui-col-xs-2 margin_top8">
+					<a class="mui-navigate-right delect1" onclick="goToXAD('selectionAD.html')"></a>
+					<a class="mui-icon mui-icon-trash font_colorf5 delect2" style="display: none;margin-left: 32%;margin-top: -13%"
+					 onclick="delectA('J')"></a>
+				</div>
+			</div>
+			<div class="mui-row" style="border-bottom: 1px solid #E9E9E9;">
+				<div class="mui-col-xs-2">
+					<div class="add_btn">
+						公司
+					</div>
+				</div>
+				<div class="mui-col-xs-8 margin_top2">
+					<input type="text" name="" id="" value="" placeholder="设置家的地址" class="add_input" />
+				</div>
+				<div class="mui-col-xs-2 margin_top8">
+					<a class="mui-navigate-right delect1"></a>
+					<a class="mui-icon mui-icon-trash font_colorf5 delect2" style="display: none;margin-left: 32%;margin-top: -13%;"
+					 onclick="delectA('G')"></a>
+				</div>
+			</div>
+
+		</div>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
+			// 点击删除样式变化
+			function switchDelect(id) {
+				if (id == 'title1') {
+					$('#title1').css('display', 'none');
+					$('#title2').css('display', 'block');
+					$('.delect1').css('display', 'none');
+					$('.delect2').css('display', 'block');
+				} else {
+					$('#title2').css('display', 'none');
+					$('#title1').css('display', 'block');
+					$('.delect2').css('display', 'none')
+					$('.delect1').css('display', 'block');
+				}
+			};
+			// 地址删除
+			function delectA(faly) {
+				mui.toast('删除成功');
+				if (faly == 'J') {
+
+				}
+			};
+			// 地址选择
+			function goToXAD(url) {
+				mui.openWindow({
+					url: url,
+					extras: {
+						name: url //扩展参数
+					}
+				});
+			}
 		</script>
 	</body>
 
