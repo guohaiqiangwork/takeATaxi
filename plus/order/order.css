@@ -6,7 +6,9 @@
 .padding_right3 {
 	padding-right: 3%;
 }
-
+.padding_left0{
+	padding-left: 0;
+}
 .padding_left2 {
 	padding-left: 2%;
 }
@@ -22,7 +24,9 @@
 .padding_bottom3 {
 	padding-bottom: 3%;
 }
-
+.margin_top_tit{
+	margin-top: 2.8125rem;
+}
 .margin_top3 {
 	margin-top: 3%;
 }
@@ -51,6 +55,9 @@
 }
 .background_colorff {
 	background-color: #FFFFFF;
+}
+.background_colorf8{
+	background-color: #F8F8F8;
 }
 
 /* 字体 */
