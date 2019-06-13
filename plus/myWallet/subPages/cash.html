@@ -88,7 +88,7 @@
 			</div>
 			<div class="margin_top3 background_colorff" style="min-height: 12.5rem;">
 				<div style="padding-top: 60%;padding-bottom: 10%;">
-					<div class="  mui-text-center pay_btn " ng-click="openCloseModelP(true)">
+					<div class="  mui-text-center pay_btn " ng-click="openCloseModel(true)">
 					确认提现
 				</div>
 				</div>
@@ -98,14 +98,14 @@
 		</div>
 		<!-- 提现失败弹窗 -->
 		<div class="mui-popup-backdrop mui-active" style="display: block;" ng-if="subPages.payFail">
-			<div class="backgroung_color_ff mui-text-center">
-				<div>
+			<div class="background_colorff mui-text-center password_model">
+				<div class="font_size18 font_color1A padding_top3">
 					提现失败
 				</div>
-				<div>
+				<div class="font_size16 font_colorA1 margin_top8">
 					提现金额不足1元
 				</div>
-				<div ng-click="openCloseModel(false)">
+				<div class="cash_pay_btn" ng-click="openCloseModel(false)">
 					知道了
 				</div>
 			</div>
