@@ -1,30 +1,4 @@
-/* 公共 */
-.font_color_red {
-	color: red;
-}
-
-.font_text_right {
-	text-align: right;
-}
-
-/* 字体颜色 */
-.font_color_ff {
-	color: #FFFFFF;
-}
-
-/* 背景色 */
-.backgroung_color_007 {
-	background-color: #007AFF;
-}
-
-.backgroung_color_ff {
-	background-color: #FFFFFF;
-}
-
-/* margin */
-.margin_top3 {
-	margin-top: 3%;
-}
+/*  */
 
 /* 内容 */
 .margin_top_title {
@@ -59,6 +33,7 @@
 .recharge_money_in {
 	border: none !important;
 	border-bottom: 1px solid #555555 !important;
+	border-radius: 0 !important;
 }
 
 /* 提现 */
@@ -66,6 +41,32 @@
 	width: 12%;
 	margin-top: 8%;
 	float: left
+}
+
+.cash_t_img {
+	width: 1.625rem;
+	height: 1.625rem;
+	border-radius: 0.1875rem;
+	overflow: hidden;
+	border: 1px solid red;
+}
+
+.password_model {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 50%;
+	border-radius: 0.5rem;
+}
+.cash_pay_btn{
+	width: 100%;
+	background-color: #008BD5;
+	color: #FFFFFF;
+	font-size: 1rem;
+	text-align: center;
+	line-height: 3;
+	border-bottom-left-radius: 0.3125rem;
+	border-bottom-right-radius: 0.3125rem;
+	margin-top: 8%;
 }
 
 /* 账单列表 */

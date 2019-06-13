@@ -32,7 +32,9 @@
 .padding_bottom3 {
 	padding-bottom: 3%;
 }
-
+.padding3{
+	padding: 3%;
+}
 .margin_top_tit {
 	margin-top: 2.8125rem;
 }
@@ -79,7 +81,12 @@
 .font_size_38 {
 	font-size: 2.375rem;
 }
-
+.font_size25{
+	font_size:1.5625rem
+}
+.font_size18{
+	font-size: 1.125rem;
+}
 .font_size16 {
 	font-size: 1rem;
 }
@@ -116,6 +123,9 @@
 }
 .font_colorf5{
 	color: #F52D56;
+}
+.font_color99{
+	color: #999999;
 }
 
 /* div */
