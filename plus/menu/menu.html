@@ -33,14 +33,28 @@
 			  .mui-table-view{
 			  	margin-bottom: 35px;
 			  }
+			   .menu_img_head{
+				  width: 3.75rem;
+				  height: 3.75rem;
+				  border-radius: 50%;
+				  overflow: hidden;
+				  text-align: center;
+				  background-color: #E9EAEA;
+				  margin-left: 38%;
+				  margin-top: 8%;
+			  }
+			  .margin_top8{
+				  margin-top: 8%;
+			  }
 		</style>
 	</head>
 	<body>
-		<button id="close-btn" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">关闭侧滑菜单</button>
-		<div style="text-align: center;">
-			<img src="../../images/qq.png" width="50%" onclick="goToWebView('../personal/personal.html')">
+		<!-- <button id="close-btn" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">关闭侧滑菜单</button> -->
+
+		<div class="menu_img_head">
+			<img src="../../images/qq.png" width="100%" onclick="goToWebView('../personal/personal.html')">
 		</div>
-		<div style="text-align: center;">
+		<div class="mui-text-center margin_top8">
 			hfah客户的方式
 		</div>
 		<div class="mui-content">
@@ -107,7 +121,7 @@
 			}
 			//优化显示出来的侧滑菜单，只需监听该菜单的左滑事件，然后将其关闭即可；在菜单上右滑，不做任何操作；
 			window.addEventListener("swipeleft", closeMenu);
-			document.getElementById("close-btn").addEventListener('tap', closeMenu);
+			// document.getElementById("close-btn").addEventListener('tap', closeMenu);
 			mui.menu = closeMenu;
 
 			// 页面跳转
