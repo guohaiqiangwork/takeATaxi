@@ -28,7 +28,28 @@ app.controller("subPagesController", function($scope, $http) {
 	}, {
 		number: '200元',
 		id: '09'
-	}]
+	}];
+	$scope.billList = [{
+			name: '打车消费',
+			money: '-100',
+			time: '2019-01-25  15:00:00'
+		},
+		{
+			name: '充值金额',
+			money: '+100',
+			time: '2019-01-25  15:00:00'
+		},
+		{
+			name: '佣金',
+			money: '+100',
+			time: '2019-01-25  15:00:00'
+		},
+		{
+			name: '提现',
+			money: '-100',
+			time: '2019-01-25  15:00:00'
+		},
+	];
 	$scope.subPages = {
 		moneyFaly: "01", //选中金额
 		payFail: false, //失败提示框

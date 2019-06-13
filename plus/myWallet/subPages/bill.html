@@ -4,18 +4,37 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<!-- <title>我的账单</title> -->
-		<link rel="stylesheet" href="../../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../order/order.css" />
+		<link rel="stylesheet" href="subpages.css" />
 		<script src="../../../js/angular.1.2.29.min.js"></script>
 		<script src="subPages.js"></script>
 	</head>
 
-	<body  ng-app="subPages" ng-controller="subPagesController">
+	<body class="background_colorff" ng-app="subPages" ng-controller="subPagesController">
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">我的账单4</h1>
+			<h1 class="mui-title">我的账单</h1>
 		</header>
-	
+		<div class="margin_top_tit">
+			<div class="bill_list" ng-repeat="item in billList">
+				<div class="mui-row padding_top3 font_size16 font_color1A ">
+					<div class="mui-col-xs-6">
+						{{item.name}}
+					</div>
+					<div class="mui-col-xs-6 mui-text-right ">
+						{{item.money}}币
+					</div>
+				</div>
+				<div class="margin_top3 padding_bottom3 font_size13 font_colorA1">
+					{{item.time}}
+				</div>
+			</div>
+		</div>
+
 		<script src="../../../js/mui.min.js"></script>
+		<script src="../../../js/angular.1.2.29.min.js"></script>
+		<script src="subPages.js"></script>
 
 	</body>
 </html>

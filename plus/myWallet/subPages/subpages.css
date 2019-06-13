@@ -67,3 +67,10 @@
 	margin-top: 8%;
 	float: left
 }
+
+/* 账单列表 */
+.bill_list {
+	border-bottom: 1px solid #E9E9E9;
+	width: 94%;
+	margin-left: 3%;
+}
