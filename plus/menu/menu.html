@@ -49,49 +49,108 @@
 		</style>
 	</head>
 	<body>
-		<!-- <button id="close-btn" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">关闭侧滑菜单</button> -->
 
-		<div class="menu_img_head">
-			<img src="../../images/qq.png" width="100%" onclick="goToWebView('../personal/personal.html')">
+		<!-- <button id="close-btn" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">关闭侧滑菜单</button> -->
+		<!-- 乘客 -->
+		<div id="carPassenger">
+			<div class="menu_img_head">
+				<img src="../../images/qq.png" width="100%" onclick="goToWebView('../personal/personal.html')">
+			</div>
+			<div class="mui-text-center margin_top8">
+				hfah客户的方式
+			</div>
+			<div class="mui-content">
+				<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../myWallet/myWallet.html','myWallet')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 我的钱包
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../order/order.html','order')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 我的订单
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../invitation/invitation.html','invitation')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 邀请有礼
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../address/address.html','address')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 常用地址
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" id="confirmBtn">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 切换身份
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../setUp/setUp.html','setUp')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 设置
+						</a>
+					</li>
+				</ul>
+			</div>
+
 		</div>
-		<div class="mui-text-center margin_top8">
-			hfah客户的方式
-		</div>
-		<div class="mui-content">
-			<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
-				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right" onclick="goToWebView('../myWallet/myWallet.html','myWallet')">
-						<img src="../../images/iconfont-tianjia.png" width="10px"> 我的钱包
-					</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right" onclick="goToWebView('../order/order.html','order')">
-						<img src="../../images/iconfont-tianjia.png" width="10px"> 我的订单
-					</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right" onclick="goToWebView('../invitation/invitation.html','invitation')">
-						<img src="../../images/iconfont-tianjia.png" width="10px"> 邀请有礼
-					</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right" onclick="goToWebView('../address/address.html','address')">
-						<img src="../../images/iconfont-tianjia.png" width="10px"> 常用地址
-					</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right" id="confirmBtn">
-						<img src="../../images/iconfont-tianjia.png" width="10px"> 切换身份
-					</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right" onclick="goToWebView('../setUp/setUp.html','setUp')">
-						<img src="../../images/iconfont-tianjia.png" width="10px"> 设置
-					</a>
-				</li>
-			</ul>
+		<!-- 司机 -->
+		<div id="carDriver" style="display: none;">
+			<div class="menu_img_head">
+				<img src="../../images/qq.png" width="100%" onclick="goToWebView('../personal/personal.html')">
+			</div>
+			<div class="mui-text-center margin_top5">
+				司机端
+			</div>
+			<div class="mui-content">
+				<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../myWallet/myWallet.html','myWallet')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 我的钱包
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../order/order.html','order')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 我的订单
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../invitation/invitation.html','invitation')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 邀请有礼
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../address/address.html','address')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 常用地址
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../myCar/myCar.html','address')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 我的车辆
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../address/address.html','address')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 积分商城
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" id="confirmBtn1">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 切换身份
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../setUp/setUp.html','setUp')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 设置
+						</a>
+					</li>
+				</ul>
+			</div>
+
 		</div>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			mui.init({
 				keyEventBind: {
@@ -104,14 +163,27 @@
 			mui.plusReady(function() {
 				main = plus.webview.currentWebview().opener();
 			})
-			// 切换身份弹窗
+			// 切换司机身份弹窗
 			document.getElementById("confirmBtn").addEventListener('tap', function() {
 				var btnArray = ['否', '是'];
 				mui.confirm('确定切换到司机身份？', 'title', btnArray, function(e) {
 					if (e.index == 1) {
-						info.innerText = '你刚确认MUI是个好框架';
+						$('#carDriver').css('display', 'block');
+						$('#carPassenger').css('display', 'none');
 					} else {
-						info.innerText = 'MUI没有得到你的认可，继续加油'
+
+					}
+				})
+			});
+			// 切换乘客身份弹窗
+			document.getElementById("confirmBtn1").addEventListener('tap', function() {
+				var btnArray = ['否', '是'];
+				mui.confirm('确定切换到乘客身份？', 'title', btnArray, function(e) {
+					if (e.index == 1) {
+						$('#carDriver').css('display', 'none');
+						$('#carPassenger').css('display', 'block');
+					} else {
+
 					}
 				})
 			});
@@ -127,7 +199,6 @@
 			// 页面跳转
 			function goToWebView(url, id) {
 				closeMenu(); //关闭侧栏菜单
-				console.log(url)
 				mui.openWindow({
 					url: url,
 					id: id,
