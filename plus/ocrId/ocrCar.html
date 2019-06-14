@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!-- <title>我的账单</title> -->
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../order/order.css" />
+		<link rel="stylesheet" type="text/css" href="ocrId.css" />
+		<style type="text/css">
+			input {
+				border: none;
+				font-size: 0.8125rem;
+				color: #A1A1A1;
+			}
+
+			.margin_left_3 {
+				margin-left: -3%
+			}
+
+			.margin_left_8 {
+				margin-left: -8%;
+				margin-top: -1%;
+			}
+
+			.margin_left_12 {
+				margin-left: -12%;
+				margin-top: -1%;
+			}
+
+			.ocrcar_img {
+				border-radius: 0 !important;
+				margin-left: 7% !important;
+				width: 40% !important;
+			}
+		</style>
+	</head>
+
+	<body class="background_colorff">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">车辆认证</h1>
+		</header>
+		<div class="margin_top_tit">
+			<div class="mui-row padding_top3">
+				<div class="mui-col-xs-2 mui-text-right font_size16 font_color1A">
+					名字
+				</div>
+				<div class="mui-col-xs-10 padding_left3">
+					王刚
+				</div>
+			</div>
+			<div class="mui-row margin_top3">
+				<div class="mui-col-xs-4 mui-text-center font_size16 font_color1A">
+					车辆信息
+				</div>
+			</div>
+			<div class="mui-row margin_top5">
+				<div class="mui-col-xs-4 mui-text-center font_size14 font_color1A" style="margin-left: -3%;">
+					车牌号:
+				</div>
+				<div class="mui-col-xs-8 mui-text-left margin_left_8">
+					<input type="" name="" id="" value="" placeholder="请输入车牌号" />
+				</div>
+			</div>
+			<div class="mui-row margin_top5">
+				<div class="mui-col-xs-4 mui-text-center font_size14 font_color1A margin_left_3">
+					车型：
+				</div>
+				<div class="mui-col-xs-8 mui-text-left margin_left_8">
+					<input type="" name="" id="" value="" placeholder="请输入车型" />
+				</div>
+			</div>
+			<div class="mui-row margin_top5">
+				<div class="mui-col-xs-5 mui-text-center font_size14 font_color1A margin_left_3">
+					车辆颜色：
+				</div>
+				<div class="mui-col-xs-7 mui-text-left margin_left_12">
+					<input type="" name="" id="" value="" placeholder="请输入车辆颜色" />
+				</div>
+			</div>
+			<div class="mui-row margin_top5">
+				<div class="mui-col-xs-5 mui-text-center font_size14 font_color1A margin_left_3">
+					车辆座位：
+				</div>
+				<div class="mui-col-xs-7 mui-text-left margin_left_12">
+					<input type="" name="" id="" value="" placeholder="请输入车辆座位" />
+				</div>
+			</div>
+			<div class="mui-row margin_top3">
+				<div class="mui-col-xs-4 mui-text-center font_size16 font_color1A">
+					证件认证
+				</div>
+			</div>
+			<div class="mui-row margin_top3">
+				<div class="mui-col-xs-4 mui-text-center font_size14 font_color1A">
+					驾驶证：
+				</div>
+			</div>
+			<div class="div_display margin_top5 padding_bottom8">
+				<div class="ocrId_UP_border ocrcar_img">
+					<div class="ocr_img_size" style="margin-left: 14%;">
+						<img src="../../images/qq.png" width="100%" id="InputFile">
+					</div>
+				</div>
+				<div class="ocrId_UP_border ocrcar_img">
+					<div class="ocr_img_size" style="margin-left: 14%;">
+						<img src="../../images/qq.png" width="100%" id="InputFile1">
+					</div>
+				</div>
+			</div>
+			<div class="mui-row">
+				<div class="mui-col-xs-4 mui-text-center font_size14 font_color1A">
+					行驶证：
+				</div>
+			</div>
+			<div class="div_display margin_top5 padding_bottom8">
+				<div class="ocrId_UP_border ocrcar_img">
+					<div class="ocr_img_size" style="margin-left: 14%;">
+						<img src="../../images/qq.png" width="100%" id="InputFile">
+					</div>
+				</div>
+				<div class="ocrId_UP_border ocrcar_img">
+					<div class="ocr_img_size" style="margin-left: 14%;">
+						<img src="../../images/qq.png" width="100%" id="InputFile1">
+					</div>
+				</div>
+			</div>
+			<div class="mui-row">
+				<div class="mui-col-xs-4 mui-text-center font_size14 font_color1A">
+					车辆正面照：
+				</div>
+				<div class="mui-col-xs-4 mui-text-center font_size14 font_color1A">
+					车辆正面照：
+				</div>
+			</div>
+			<div class="div_display margin_top5 padding_bottom8">
+				<div class="ocrId_UP_border ocrcar_img">
+					<div class="ocr_img_size" style="margin-left: 14%;">
+						<img src="../../images/qq.png" width="100%" id="InputFile">
+					</div>
+				</div>
+				<div class="ocrId_UP_border ocrcar_img">
+					<div class="ocr_img_size" style="margin-left: 14%;">
+						<img src="../../images/qq.png" width="100%" id="InputFile1">
+					</div>
+				</div>
+			</div>
+			<div class="ocr_btn_go margin_top8">
+				开始认证
+			</div>
+		</div>
+
+
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.8.3.min.js"></script>
+	</body>
+</html>

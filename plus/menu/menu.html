@@ -52,7 +52,7 @@
 
 		<!-- <button id="close-btn" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">关闭侧滑菜单</button> -->
 		<!-- 乘客 -->
-		<div id="carPassenger">
+		<div id="carPassenger" style="display: none;">
 			<div class="menu_img_head">
 				<img src="../../images/qq.png" width="100%" onclick="goToWebView('../personal/personal.html')">
 			</div>
@@ -96,7 +96,7 @@
 
 		</div>
 		<!-- 司机 -->
-		<div id="carDriver" style="display: none;">
+		<div id="carDriver" >
 			<div class="menu_img_head">
 				<img src="../../images/qq.png" width="100%" onclick="goToWebView('../personal/personal.html')">
 			</div>
@@ -152,7 +152,12 @@
 					</li>
 					<li class="mui-table-view-cell">
 						<a class="mui-navigate-right" onclick="goToWebView('../ocrId/ocrFace.html','ocrId')">
-							<img src="../../images/iconfont-tianjia.png" width="10px"> 人脸
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 人脸认证
+						</a>
+					</li>
+						<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="goToWebView('../ocrId/ocrCar.html','ocrId')">
+							<img src="../../images/iconfont-tianjia.png" width="10px"> 车辆认证
 						</a>
 					</li>
 				</ul>
