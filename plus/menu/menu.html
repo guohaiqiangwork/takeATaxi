@@ -165,6 +165,7 @@
 			})
 			// 切换司机身份弹窗
 			document.getElementById("confirmBtn").addEventListener('tap', function() {
+				closeMenu()
 				var btnArray = ['否', '是'];
 				mui.confirm('确定切换到司机身份？', 'title', btnArray, function(e) {
 					if (e.index == 1) {
@@ -177,6 +178,7 @@
 			});
 			// 切换乘客身份弹窗
 			document.getElementById("confirmBtn1").addEventListener('tap', function() {
+				closeMenu()
 				var btnArray = ['否', '是'];
 				mui.confirm('确定切换到乘客身份？', 'title', btnArray, function(e) {
 					if (e.index == 1) {
