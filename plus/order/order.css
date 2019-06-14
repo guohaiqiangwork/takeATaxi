@@ -1,4 +1,8 @@
 /* 公共 */
+.div_display {
+	display: flex;
+}
+
 .padding_left3 {
 	padding-left: 3%;
 }
@@ -32,21 +36,31 @@
 .padding_bottom3 {
 	padding-bottom: 3%;
 }
-.padding3{
+
+.padding_bottom8 {
+	padding-bottom: 8%;
+}
+
+.padding3 {
 	padding: 3%;
 }
+
 .margin_top_tit {
 	margin-top: 2.8125rem;
 }
-.margin_top2{
+
+.margin_top2 {
 	margin-top: 2%;
 }
+
 .margin_top3 {
 	margin-top: 3%;
 }
-.margin_top5{
+
+.margin_top5 {
 	margin-top: 5%;
 }
+
 .margin_top8 {
 	margin-top: 8%;
 }
@@ -61,6 +75,10 @@
 
 .margin_right3 {
 	margin-right: 3%;
+}
+
+.margin_right5 {
+	margin-right: 5%;
 }
 
 .margin_left3 {
@@ -83,12 +101,15 @@
 .font_size_38 {
 	font-size: 2.375rem;
 }
-.font_size25{
-	font_size:1.5625rem
+
+.font_size25 {
+	font_size: 1.5625rem
 }
-.font_size18{
+
+.font_size18 {
 	font-size: 1.125rem;
 }
+
 .font_size16 {
 	font-size: 1rem;
 }
@@ -102,7 +123,7 @@
 }
 
 .font_size13 {
-	font_size: 0.8125rem
+	font_size: 0.8125rem;
 }
 
 .font_size12 {
@@ -112,23 +133,32 @@
 .font_color1A {
 	color: #1A202C;
 }
-.font_color_E6{
+
+.font_color_E6 {
 	color: #E6435A;
 }
+
 .font_color3f {
 	color: #3F454B;
+}
+
+.font_color_99 {
+	color: #999999;
 }
 
 .font_colorA1 {
 	color: #A1A1A1;
 }
-.font_color00{
+
+.font_color00 {
 	color: #008BD5;
 }
-.font_colorf5{
+
+.font_colorf5 {
 	color: #F52D56;
 }
-.font_color99{
+
+.font_color99 {
 	color: #999999;
 }
 
