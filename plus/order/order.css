@@ -101,7 +101,9 @@
 .font_size_38 {
 	font-size: 2.375rem;
 }
-
+.font_size30{
+	font-size: 1.875rem;
+}
 .font_size25 {
 	font_size: 1.5625rem
 }
@@ -148,6 +150,10 @@
 
 .font_colorA1 {
 	color: #A1A1A1;
+}
+
+.font_colorff {
+	color: #FFFFFF;
 }
 
 .font_color00 {

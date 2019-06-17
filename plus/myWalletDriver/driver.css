@@ -1,0 +1,11 @@
+.background_color24 {
+	background-color: #242E42;
+}
+
+.driver_border {
+	border-left: 1px solid #242E42;
+	width: 0.125rem;
+	height: 1.5rem;
+	margin-top: 24%;
+	margin-left: 40%;
+}
