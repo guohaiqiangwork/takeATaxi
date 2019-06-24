@@ -6,16 +6,79 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../order/order.css" />
 	</head>
 
-	<body>
+	<body class="background_colorf8">
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">设置</h1>
 		</header>
+		<div class="margin_top_tit">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" onclick="goToSetHL('sPassword.html')">
+						设置支付密码
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" onclick="cleanCache()">
+						清理缓存
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" onclick="goToSetHL('protocol.html')">
+						用户协议
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" onclick="goToSetHL('about.html')">
+						关于美好同乘
+					</a>
+				</li>
+			</ul>
+
+			<ul class="margin_top3 padding_left0 background_colorff">
+				<li class="mui-table-view-cell">
+					开启免密
+					<div class="mui-switch mui-switch-blue mui-switch-mini mui-active">
+						<div class="mui-switch-handle"></div>
+					</div>
+				</li>
+			</ul>
+			<div class="order_pay_btn">
+				退出登录
+			</div>
+		</div>
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
+
+			function cleanCache() {
+				plus.cache.calculate(function(size) {
+					console.log(size)
+					sizeCache = size;
+					var size_m = parseFloat(sizeCache / (1024 * 1024)).toFixed(2);
+					if (size_m > 1) {
+						mui.confirm("您目前的系统缓存为" + size_m + "M？", "清除缓存", ["确认", "取消"], function(e) {
+							if (e.index == 1) {} else {
+								plus.cache.clear(function() {
+									alert("缓存清除完毕")
+								});
+							}
+						});
+					}
+				});
+			}
+			// 页面切换
+			function goToSetHL(url) {
+				mui.openWindow({
+					url: url,
+					extras: {
+						name: url //扩展参数
+					}
+				});
+			}
 		</script>
 	</body>
 

@@ -1,0 +1,70 @@
+/*  */
+
+/* 内容 */
+.margin_top_title {
+	margin-top: 2.8125rem;
+}
+
+/*充值  */
+.recharge_div {
+	padding: 3%;
+	margin-left: 5%;
+	margin-top: 3%;
+	color: #007AFF;
+	border: 1px solid #007AFF;
+}
+
+.recharge_div_Z {
+	color: #FFFFFF;
+	background-color: #007AFF;
+	padding: 3%;
+	margin-left: 5%;
+	margin-top: 3%;
+	border: 1px solid #007AFF;
+}
+
+.recharge_money_in {
+	border: none !important;
+	border-bottom: 1px solid #555555 !important;
+	border-radius: 0 !important;
+}
+
+/* 提现 */
+.password_input {
+	width: 12%;
+	margin-top: 8%;
+	float: left
+}
+
+.cash_t_img {
+	width: 1.625rem;
+	height: 1.625rem;
+	border-radius: 0.1875rem;
+	overflow: hidden;
+	border: 1px solid red;
+}
+
+.password_model {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 50%;
+	border-radius: 0.5rem;
+}
+.cash_pay_btn{
+	width: 100%;
+	background-color: #008BD5;
+	color: #FFFFFF;
+	font-size: 1rem;
+	text-align: center;
+	line-height: 3;
+	border-bottom-left-radius: 0.3125rem;
+	border-bottom-right-radius: 0.3125rem;
+	margin-top: 8%;
+}
+
+/* 账单列表 */
+.bill_list {
+	border-bottom: 1px solid #E9E9E9;
+	width: 94%;
+	margin-left: 3%;
+}

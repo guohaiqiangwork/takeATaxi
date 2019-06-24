@@ -1,0 +1,14 @@
+.add_btn {
+	background-color: #008BD5;
+	color: #fff;
+	text-align: center;
+	padding: 3%;
+	border-radius: 2px;
+	width: 90%;
+	font-size: 0.75rem;
+	margin-left: 8%;
+	margin-top: 24%;
+}
+.add_input{
+	border: none !important;
+}

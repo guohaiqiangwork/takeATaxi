@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>提现</title>
+		<link rel="stylesheet" href="../../../css/mui.min.css" />
+		<link rel="stylesheet" href="subpages.css" />
+		<link rel="stylesheet" href="../../order/order.css" />
+		<script src="../../../js/angular.1.2.29.min.js"></script>
+		<script src="../../../js/jquery-1.8.3.min.js"></script>
+		<script src="subPages.js"></script>
+		<style type="text/css">
+			#box {
+				width: 90%;
+				height: 1.875rem;
+				/* margin: 200px auto 80px; */
+				text-align: center;
+				margin-left: 5%;
+			}
+
+			#box input {
+				width: 0.625rem;
+				height: 1.875rem;
+				/* line-height: 60px; */
+				display: inline-block;
+				border: 1px solid #e3e3e3;
+				background-color: #f5f5f5;
+				text-align: center;
+				font-size: 0.75rem;
+				font-weight: bold;
+			}
+
+			button {
+				display: block;
+				padding: 7px 25px;
+				margin: auto;
+				border: 1px solid #f43b51;
+				background-color: #F43B51;
+				color: white;
+				font-size: 18px;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+
+			button:hover {
+				opacity: 0.7;
+			}
+		</style>
+	</head>
+
+	<body ng-app="subPages" ng-controller="subPagesController" class="backgroung_color_ff">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">提现</h1>
+		</header>
+		<div class="margin_top_title">
+			<div class="background_colorff">
+
+
+				<div class="padding_top3 margin_left3 font_size15 font_color1A">
+					提现金额
+				</div>
+				<div class="mui-row margin_left3">
+					<div class="mui-col-xs-1 margin_top3 font_size25">
+						¥
+					</div>
+					<div class="mui-col-xs-10">
+						<input type="number" name="" id="" placeholder="1元起可提现" value="" class="recharge_money_in font_colorA1 font_size13" />
+					</div>
+				</div>
+				<div class="margin_left3 font_size13 font_color99 padding_bottom3">
+					可提现10同乘币，1同乘币 = 1元
+				</div>
+			</div>
+			<div class="mui-row background_colorff margin_top3 padding3">
+				<div class="mui-col-xs-2">
+					<div class="cash_t_img">
+						<img src="../../../images/logo.png" width="100%">
+					</div>
+				</div>
+				<div class="mui-col-xs-5  font_size15 font_color1A">
+					提现到支付宝
+				</div>
+				<div class="mui-col-xs-4 mui-text-right">
+					<input type="radio" id="radio1" value="" />
+				</div>
+			</div>
+			<div class="margin_top3 background_colorff" style="min-height: 12.5rem;">
+				<div style="padding-top: 60%;padding-bottom: 10%;">
+					<div class="  mui-text-center pay_btn " ng-click="openCloseModel(true)">
+					确认提现
+				</div>
+				</div>
+				
+			</div>
+
+		</div>
+		<!-- 提现失败弹窗 -->
+		<div class="mui-popup-backdrop mui-active" style="display: block;" ng-if="subPages.payFail">
+			<div class="background_colorff mui-text-center password_model">
+				<div class="font_size18 font_color1A padding_top3">
+					提现失败
+				</div>
+				<div class="font_size16 font_colorA1 margin_top8">
+					提现金额不足1元
+				</div>
+				<div class="cash_pay_btn" ng-click="openCloseModel(false)">
+					知道了
+				</div>
+			</div>
+		</div>
+		<!-- 密码输入框 -->
+		<div class="mui-popup-backdrop mui-active" style="display: block;" ng-show="subPages.passwordFaly">
+			<div class="background_colorff mui-text-center password_model">
+				<div class="mui-text-right">
+					<a class="mui-icon mui-icon-closeempty" class="font_size12" ng-click="openCloseModelP(false)"></a>
+				</div>
+				<div class="mui-text-center font_size18 font_color1A">
+					请输入支付密码
+				</div>
+				<div id="box" class="box margin_top8">
+					<input type="text" name="password" value="" maxlength="1" />
+					<input type="text" name="password" value="" maxlength="1" disabled="disabled" />
+					<input type="text" name="password" value="" maxlength="1" disabled="disabled" />
+					<input type="text" name="password" value="" maxlength="1" disabled="disabled" />
+					<input type="text" name="password" value="" maxlength="1" disabled="disabled" />
+					<input type="text" name="password" value="" maxlength="1" disabled="disabled" />
+				</div>
+				<div class="cash_pay_btn">
+					确认支付
+				</div>
+			</div>
+		</div>
+
+		<script src="../../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			var passwordStr = '';
+			$(document).ready(function() {
+				$("#box input").eq(0).focus();
+				$("#box input").keyup(function() {
+					if (!parseInt($(this).val())) {
+						$(this).val('');
+						return false;
+					}
+					if (parseInt($(this).index()) + 1 <= $("#box input").length) {
+						passwordStr += $(this).val();
+						console.log(passwordStr);
+						$(this).blur();
+						$(this).val('*');
+						$(this).attr('disabled', 'true');
+						if (parseInt($(this).index()) + 1 <= $("#box input").length) {
+							$(this).next('input').removeAttr('disabled');
+							$(this).next('input').focus();
+						}
+					}
+				});
+				$("#reset").click(function() {
+					$("#box input").val('');
+					$("#box input").attr('disabled', 'disabled');
+					$("#box input").eq(0).removeAttr('disabled');
+					$("#box input").eq(0).focus();
+					passwordStr = '';
+				});
+			});
+		</script>
+	</body>
+</html>

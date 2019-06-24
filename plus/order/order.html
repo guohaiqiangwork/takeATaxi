@@ -4,44 +4,64 @@
 		<meta charset="utf-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<script src="../../js/angular.1.2.29.min.js"></script>
 		<script src="orderCtr.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="order.css" rel="stylesheet" />
 	</head>
 
-	<body>
+	<body ng-controller="orderController" ng-app="order">
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">我的订单</h1>
 		</header>
-		<div ng-app="myApp" style="margin-top: 2.8125rem;">
-
-			<div ng-controller="myController">
-
-				<div ng-repeat="item in [1,2,3]">
-					<h2>{{message}}</h2>
+		<div class="margin_top_tit">
+			<div style="margin-top: 1.25rem;width: 95%;background-color: #FFFFFF;margin-left: 2%;" ng-repeat="item in order.orderList">
+				<div class="mui-row padding_top3">
+					<div class="mui-col-xs-8 padding_left3">
+						{{item.time}}
+					</div>
+					<div class="mui-col-xs-4 mui-text-center" ng-click="goToDetails(item.faly)">
+						<span style="padding-right: 13%;">{{item.faly}}</span>
+						<a class="mui-navigate-right"> </a>
+						<!-- <img src="../../images/arraw_left.png" > -->
+					</div>
 				</div>
-
-			</div>
-
-		</div>
-		<div style="margin-top: 2.75rem;width: 95%;background-color: #FFFFFF;margin-left: 2%;" ng-repeat="ni in [1,2,3]">
-			<div style="display: flex;">
-				<div>
-					2019-10-15 12:00
+				<div class="mui-row margin_top3 ">
+					<div class="mui-col-xs-1 mui-text-center">
+						<img src="../../images/logo.png" width="50%">
+					</div>
+					<div class="mui-col-xs-10 padding_left2 text_over_hidden">
+						{{item.add1}}
+					</div>
 				</div>
-				<a class="mui-navigate-right"> 进行中</a>
+				<div class="order_s_lj margin_top3"></div>
+				<div class="mui-row margin_top3 padding_bottom3">
+					<div class="mui-col-xs-1 mui-text-center">
+						<img src="../../images/qihoo.png" width="50%">
+					</div>
+					<div class="mui-col-xs-10 padding_left2 text_over_hidden">
+						{{item.add2}}
+					</div>
+				</div>
 			</div>
-			<div>
-				包头工商联大厦
-			</div>
-			<div>
-				包头工商联大厦电风扇
-			</div>
+
 		</div>
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
+			//打开订单详情
+			goToDetailsN = function(id) {
+				mui.openWindow({
+					url: 'orderDetails.html',
+					// show:{
+					// 	autoShow:false
+					// },
+					extras: {
+						name: id //扩展参数
+					}
+				});
+			}
 		</script>
 	</body>
 
