@@ -54,6 +54,10 @@ html,body {
 	height: 1rem;
 }
 
+.flex-start{
+	display: flex;
+}
+
 .flex-between{
 	display: flex;
 	justify-content: space-between;

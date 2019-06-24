@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+		<link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="list.css"/>
+		<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&key=6f1e8ab085d6b72e12182d59c14b31c9"></script>
+		<!-- <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script> -->
+		<script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+		<script src="https://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+		
+	<body>
+		
+			<div id="container"></div>
+		
+			<div class="mui-content">
+				<div id="list">
+					<div class="wrapper">
+						<div class="pos-box">
+							<span class="pos-icon-before"><img src="../../images/current.png" class="pos-icon pos-icon-before"></span>
+							 <div class="mui-input-row pos-word ">
+							 	<input type="text" class="mui-input-clear" id="pickerInput1" placeholder="带清除按钮的输入框">
+							 </div>
+						</div>
+						
+						<div class="pos-box">
+							<img src="../../images/address.png" class="pos-icon">
+							 <div class="mui-input-row pos-word flex-start">
+							 	<input type="text" class="mui-input-clear" id="pickerInput2" placeholder="带清除按钮的输入框">
+							 </div>
+						</div>
+						
+						<div class="pos-box">
+							<img src="../../images/address.png" class="pos-icon">
+							 <div class="mui-input-row pos-word flex-start">
+							 	<input type="text" class="mui-input-clear" id="pickerInput2" placeholder="带清除按钮的输入框">
+							 </div>
+						</div>
+					
+						<button type="button" class="mui-btn mui-btn-block mui-btn-primary query-btn" id="search" onclick="showLine()">查询路线</button>
+					</div>
+				</div>
+			</div>
+			
+		<script src="map.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="demo.js" type="text/javascript" charset="utf-8"></script> -->
+		
+	</body>
+</html>
